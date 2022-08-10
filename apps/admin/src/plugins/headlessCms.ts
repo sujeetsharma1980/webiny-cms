@@ -62,6 +62,9 @@ import welcomeScreenWidget from "@webiny/app-headless-cms/admin/plugins/welcomeS
 
 import richTextEditor from "./headlessCMS/richTextEditor";
 
+import secretTextFieldPlugin from "./headlessCMS/fields/secretText/secretTextFieldPlugin";
+import secretTextFieldRendererPlugin from "./headlessCMS/fields/secretText/secretTextFieldRendererPlugin";
+
 export default [
     headlessCmsPlugins(),
     richTextEditor,
@@ -120,5 +123,8 @@ export default [
     editorUpperCaseSpaceFieldValidator,
     welcomeScreenWidget,
     objectField,
-    objectFieldRenderer
+    objectFieldRenderer,
+
+    secretTextFieldPlugin,
+    secretTextFieldRendererPlugin(),
 ];

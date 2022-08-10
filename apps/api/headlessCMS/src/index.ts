@@ -19,6 +19,9 @@ import { createStorageOperations as createApwSaStorageOperations } from "@webiny
 // Imports plugins created via scaffolding utilities.
 import scaffoldsPlugins from "./plugins/scaffolds";
 
+import secretTextFieldPlugin from "./fields/secretText/secretTextFieldPlugin";
+import secretTextFieldStoragePlugin from "./fields/secretText/secretTextFieldStoragePlugin";
+
 const debug = process.env.DEBUG === "true";
 
 const documentClient = new DocumentClient({
@@ -47,7 +50,11 @@ export const handler = createHandler({
         createApwHeadlessCmsContext({
             storageOperations: createApwSaStorageOperations({ documentClient })
         }),
-        scaffoldsPlugins()
+        scaffoldsPlugins(),
+
+        secretTextFieldPlugin,
+        secretTextFieldStoragePlugin(),
+
     ],
     http: { debug }
 });
