@@ -61,7 +61,8 @@
 			"apps/website",
 			"apps/theme",
 			"apps/api/graphql",
-			"apps/api/headlessCMS"
+			"apps/api/headlessCMS",
+			"apps/extensions/pb-element-iframe"
 		]
 	},
 	"scripts": {
