@@ -12,9 +12,9 @@ const createListFilters = ({ field } : {field : any} ) => {
 };
 
 const plugin: CmsModelFieldToGraphQLPlugin = {
-  name: "cms-model-field-to-graphql-secret-text",
+  name: "cms-model-field-to-graphql-dropdown",
   type: "cms-model-field-to-graphql",
-  fieldType: "secret-text",
+  fieldType: "dropdown",
   isSortable: true,
   isSearchable: true,
   read: {

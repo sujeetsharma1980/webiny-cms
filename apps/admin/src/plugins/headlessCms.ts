@@ -62,8 +62,10 @@ import welcomeScreenWidget from "@webiny/app-headless-cms/admin/plugins/welcomeS
 
 import richTextEditor from "./headlessCMS/richTextEditor";
 
-import secretTextFieldPlugin from "./headlessCMS/fields/secretText/secretTextFieldPlugin";
-import secretTextFieldRendererPlugin from "./headlessCMS/fields/secretText/secretTextFieldRendererPlugin";
+import dropdownFieldPlugin from "./headlessCMS/fields/dropdown-select/dropdownFieldPlugin";
+import dropdownFieldRendererPlugin from "./headlessCMS/fields/dropdown-select/dropdownFieldRendererPlugin";
+//import dropdownPlugin from "./headlessCMS/fields/dropdown/dropdownPlugin"
+//import dropdownRendererPlugin from "./headlessCMS/fields/dropdown/dropdownRendererPlugin";
 
 export default [
     headlessCmsPlugins(),
@@ -125,6 +127,9 @@ export default [
     objectField,
     objectFieldRenderer,
 
-    secretTextFieldPlugin,
-    secretTextFieldRendererPlugin(),
+    dropdownFieldPlugin,
+    dropdownFieldRendererPlugin(),
+
+    //dropdownPlugin,
+    //dropdownRendererPlugin()
 ];

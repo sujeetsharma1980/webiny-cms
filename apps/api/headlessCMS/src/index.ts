@@ -19,8 +19,11 @@ import { createStorageOperations as createApwSaStorageOperations } from "@webiny
 // Imports plugins created via scaffolding utilities.
 import scaffoldsPlugins from "./plugins/scaffolds";
 
-import secretTextFieldPlugin from "./fields/secretText/secretTextFieldPlugin";
-import secretTextFieldStoragePlugin from "./fields/secretText/secretTextFieldStoragePlugin";
+import dropdownFieldPlugin from "./fields/dropdown-select/dropdownFieldPlugin";
+import dropdownFieldStoragePlugin from "./fields/dropdown-select/dropdownFieldStoragePlugin";
+
+//import dropdownPlugin from "./fields/dropdown/dropdownPlugin";
+//import dropdownStoragePlugin from "./fields/dropdown/dropdownStoragePlugin";
 
 const debug = process.env.DEBUG === "true";
 
@@ -51,10 +54,12 @@ export const handler = createHandler({
             storageOperations: createApwSaStorageOperations({ documentClient })
         }),
         scaffoldsPlugins(),
+        
+        dropdownFieldPlugin,
+        dropdownFieldStoragePlugin(),
 
-        secretTextFieldPlugin,
-        secretTextFieldStoragePlugin(),
-
+        //dropdownPlugin,
+        //dropdownStoragePlugin()
     ],
     http: { debug }
 });

@@ -2,8 +2,8 @@ import { StorageTransformPlugin } from "@webiny/api-headless-cms/plugins/Storage
 
 
 const plugin = new StorageTransformPlugin({
-    fieldType: "secret-text",
-    toStorage: async ({ value, field } : {value: any, field: any}) => { // where does value come from?
+    fieldType: "dropdown",
+    toStorage: async ({ value, field } : {value: any, field: any}) => { 
       //const encryptText = new cryptr("myTotallySecretKey").encrypt(value);
       console.log("toStorage{value}: ", value, ", field: ", field);
       return {
