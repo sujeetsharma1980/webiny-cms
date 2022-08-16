@@ -11,6 +11,7 @@ import apolloCacheObjectId from "@webiny/app-page-builder/render/plugins/apolloC
 /**
  * Page element plugins to render page content.
  */
+import buyersGuideElement from "@extensions/pb-element-buyersguide/render";
 import document from "@webiny/app-page-builder/render/plugins/elements/document";
 import block from "@webiny/app-page-builder/render/plugins/elements/block";
 import grid from "@webiny/app-page-builder/render/plugins/elements/grid";
@@ -62,6 +63,7 @@ export default [
     apolloCacheObjectId,
 
     // Page elements
+    buyersGuideElement(),
     document(),
     block(),
     grid(),
