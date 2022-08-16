@@ -1,4 +1,5 @@
 // Elements
+import buyersGuideElement from "@extensions/pb-element-buyersguide/render";
 import document from "@webiny/app-page-builder/render/plugins/elements/document";
 import grid from "@webiny/app-page-builder/render/plugins/elements/grid";
 import block from "@webiny/app-page-builder/render/plugins/elements/block";
@@ -37,6 +38,7 @@ import responsiveMode from "@webiny/app-page-builder/render/plugins/responsiveMo
 
 export default [
     // Elements
+    buyersGuideElement(),
     document(),
     grid(),
     block(),
