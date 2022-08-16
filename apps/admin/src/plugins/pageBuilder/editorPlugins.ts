@@ -1,4 +1,5 @@
 // Elements
+import buyersGuideElement from "@extensions/pb-element-buyersguide/admin";
 import document from "@webiny/app-page-builder/editor/plugins/elements/document";
 import block from "@webiny/app-page-builder/editor/plugins/elements/block";
 import grid from "@webiny/app-page-builder/editor/plugins/elements/grid";
@@ -65,6 +66,7 @@ import { gridPresets } from "@webiny/app-page-builder/editor/plugins/gridPresets
 
 export default [
     // Elements
+    buyersGuideElement(),
     document(),
     grid(),
     block(),
