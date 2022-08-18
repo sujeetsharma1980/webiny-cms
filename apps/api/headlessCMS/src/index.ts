@@ -19,6 +19,12 @@ import { createStorageOperations as createApwSaStorageOperations } from "@webiny
 // Imports plugins created via scaffolding utilities.
 import scaffoldsPlugins from "./plugins/scaffolds";
 
+import dropdownFieldPlugin from "./fields/dropdown-select/dropdownFieldPlugin";
+import dropdownFieldStoragePlugin from "./fields/dropdown-select/dropdownFieldStoragePlugin";
+
+//import dropdownPlugin from "./fields/dropdown/dropdownPlugin";
+//import dropdownStoragePlugin from "./fields/dropdown/dropdownStoragePlugin";
+
 const debug = process.env.DEBUG === "true";
 
 const documentClient = new DocumentClient({
@@ -47,7 +53,13 @@ export const handler = createHandler({
         createApwHeadlessCmsContext({
             storageOperations: createApwSaStorageOperations({ documentClient })
         }),
-        scaffoldsPlugins()
+        scaffoldsPlugins(),
+        
+        dropdownFieldPlugin,
+        dropdownFieldStoragePlugin(),
+
+        //dropdownPlugin,
+        //dropdownStoragePlugin()
     ],
     http: { debug }
 });
