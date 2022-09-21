@@ -444,7 +444,7 @@ function handleSelectYear(event:any) {
 }
 function handleSelectVersion(event:any) {
   const splitVal = event.target.value.split(',');
-  setSelectedVersion(splitVal[1]);
+  setSelectedVersion(event.target.value);
   setSelectedVehicleID(splitVal[0]);
 } 
 
